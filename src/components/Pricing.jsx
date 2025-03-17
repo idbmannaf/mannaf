@@ -5,7 +5,7 @@ import React from "react";
 const pricingPlans = [
   {
     title: "Hourly Development",
-    price: "$15",
+    price: "$20",
     period: "per hour",
     description: "Perfect for small features and quick fixes",
     features: [
