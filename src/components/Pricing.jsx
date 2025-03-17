@@ -25,7 +25,7 @@ const pricingPlans = [
     period: "per month",
     description: "Dedicated development time for ongoing projects",
     features: [
-      "80 Hours Monthly Development",
+      "5 day workweek, 5 hours per day",
       "Project Management",
       "Git Version Control",
       "Frontend & Backend Work",
