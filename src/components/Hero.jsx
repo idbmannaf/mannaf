@@ -43,7 +43,7 @@ const Hero = () => {
           >
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#00D4FF]">
               <img
-                src="/me.png"
+                src={`${import.meta.env.BASE_URL}me.png`}
                 alt="Abd Mannaf"
                 className="w-full h-full object-cover"
               />

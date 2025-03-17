@@ -28,7 +28,7 @@ const About = () => {
           >
             <div className="w-full h-[400px] rounded-2xl overflow-hidden clip-path-polygon">
               <img
-                src="/IMG_0597.JPG"
+                src={`${import.meta.env.BASE_URL}/IMG_0597.JPG`}
                 alt="Abd Mannaf"
                 className="w-full h-full object-cover transform transition-transform hover:scale-105"
               />
