@@ -3,7 +3,7 @@ import { Code2, Cpu, Database, Flame, Server, Users } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 
 const stats = [
-  { icon: <Flame size={40} />, value: 100, label: "Projects completed" },
+  { icon: <Flame size={40} />, value: 53, label: "Projects completed" },
   { icon: <Users size={40} />, value: 10, label: "Satisfied clients" },
 ];
 
