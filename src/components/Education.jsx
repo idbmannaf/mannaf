@@ -10,7 +10,7 @@ const educationData = [
     type: "education",
   },
   {
-    title: "Professional Diploma",
+    title: "Professional Diploma (WDPF)",
     institution: "ISDB-Bisew",
     period: "2019-2022",
     type: "education",

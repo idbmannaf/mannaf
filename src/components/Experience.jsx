@@ -16,7 +16,22 @@ import React, { useState } from "react";
 
 const experiences = [
   {
+    company: "DigiDumpling Limited",
+    position: "Software Developer",
+    isRemote: true,
+    period: "01/04/2025 - Present",
+    description: [
+      "Developed scalable backend systems using PHP and Laravel, integrating legacy codebases and modern frameworks.",
+      "Designed and maintained RESTful APIs to support web and mobile platforms",
+      "Improved system performance through query optimization and efficient database structuring.",
+      "Contributed to architecture design, ensuring scalability, maintainability, and code quality",
+      "Collaborated with cross-functional teams to deliver feature-rich web applications",
+    ],
+    tech: ["PHP", "Laravel", "JavaScript", "MySQL", "PostgreSQL"],
+  },
+  {
     company: "Sarbs Communication Ltd",
+    isRemote: false,
     position: "Software Developer",
     period: "01/02/2023 - Present",
     description: [
@@ -29,6 +44,7 @@ const experiences = [
   },
   {
     company: "A2sys",
+    isRemote: false,
     position: "Web Developer",
     period: "01/02/2021 - 31/12/2022",
     description: [
@@ -42,6 +58,7 @@ const experiences = [
   {
     company: "Urgent Care At Lake Lucille",
     position: "SEO Manager",
+    isRemote: true,
     period: "01/01/2013 - 31/10/2017",
     description: [
       "Developed and implemented SEO strategies to improve search engine rankings",
@@ -382,6 +399,9 @@ const Experience = () => {
                     transition={{ type: "spring", stiffness: 400 }}
                   >
                     {exp.company}
+                    {exp.isRemote && (
+                      <sup className="text-xs text-gray-400 ml-2">Remote</sup>
+                    )}
                   </motion.h3>
                   <div className="flex items-center text-gray-400 bg-black/30 px-3 py-1 rounded-full">
                     <Calendar size={16} className="mr-2 text-primary" />

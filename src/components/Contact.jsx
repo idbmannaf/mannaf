@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail, Phone, Send } from "lucide-react";
 import React, { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-const Contact = () => {
+const Contact = ({ selectedPlan, setSelectedPlan }) => {
   const formRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -130,18 +130,39 @@ const Contact = () => {
               />
             </div>
 
-            <div>
-              <label htmlFor="email" className="block text-gray-400 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                name="user_email"
-                id="email"
-                required
-                className="w-full bg-[#1A1A1A] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Your email"
-              />
+            <div className="flex gap-4">
+              <div className="w-full">
+                <label htmlFor="email" className="block text-gray-400 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="user_email"
+                  id="email"
+                  required
+                  className="w-full bg-[#1A1A1A] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Your email"
+                />
+              </div>
+              <div className="w-full">
+                <label htmlFor="service" className="block text-gray-400 mb-2">
+                  Plan
+                </label>
+                <select
+                  name="service"
+                  id="service"
+                  required
+                  value={selectedPlan}
+                  onChange={(e) => setSelectedPlan(e.target.value)}
+                  className="w-full bg-[#1A1A1A] rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <option value="">Select Service</option>
+                  <option value="Hourly Development">Hourly Development</option>
+                  <option value="Monthly Retainer">Monthly Retainer</option>
+                  <option value="Project Based">Project Based</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
             </div>
 
             <div>

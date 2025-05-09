@@ -53,7 +53,7 @@ const pricingPlans = [
   },
 ];
 
-const Pricing = () => {
+const Pricing = ({ selectedPlan, setSelectedPlan }) => {
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,6 +116,7 @@ const Pricing = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => {
+                  setSelectedPlan(plan.title);
                   const contactSection = document.getElementById("contact");
                   if (contactSection) {
                     contactSection.scrollIntoView({ behavior: "smooth" });

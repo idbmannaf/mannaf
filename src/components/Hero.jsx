@@ -1,43 +1,49 @@
 import { motion } from "framer-motion";
 import { ChevronDown, Github, Linkedin } from "lucide-react";
+import {
+  SiAwsamplify,
+  SiBootstrap,
+  SiCss3,
+  SiDocker,
+  SiGin,
+  SiGit,
+  SiGo,
+  SiHtml5,
+  SiJavascript,
+  SiJquery,
+  SiLaravel,
+  SiMqtt,
+  SiMysql,
+  SiNestjs,
+  SiNodedotjs,
+  SiPhp,
+  SiPostgresql,
+  SiTypescript,
+} from "react-icons/si";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
-  // Array of programming languages and frameworks
+  // Array of programming languages and frameworks with icons
   const techIcons = [
-    { name: "Go", class: "text-blue-300" },
-    { name: "PHP", class: "text-purple-400" },
-    { name: "JavaScript", class: "text-yellow-400" },
-    { name: "TypeScript", class: "text-blue-500" },
-    { name: "Node.js", class: "text-green-500" },
-
-    // Frameworks & APIs
-    { name: "Laravel", class: "text-red-500" },
-    { name: "Go Gin", class: "text-blue-300" },
-    { name: "NestJS", class: "text-red-600" },
-    { name: "REST API", class: "text-gray-300" },
-
-    // Web Technologies
-    { name: "HTML", class: "text-orange-500" },
-    { name: "CSS", class: "text-blue-400" },
-    { name: "Bootstrap", class: "text-purple-500" },
-    { name: "jQuery", class: "text-blue-400" },
-    { name: "Ajax", class: "text-yellow-300" },
-
-    // Databases
-    { name: "MySQL", class: "text-blue-600" },
-    { name: "PostgreSQL", class: "text-blue-400" },
-    { name: "Timestream", class: "text-green-400" },
-
-    // Cloud & DevOps
-    { name: "AWS", class: "text-orange-400" },
-    { name: "Docker", class: "text-blue-500" },
-    { name: "CI/CD", class: "text-gray-300" },
-    { name: "Git", class: "text-orange-600" },
-
-    // IoT
-    { name: "AWS IoT Core", class: "text-green-500" },
-    { name: "MQTT", class: "text-purple-300" },
+    { icon: <SiGo />, class: "text-blue-300" },
+    { icon: <SiPhp />, class: "text-purple-400" },
+    { icon: <SiJavascript />, class: "text-yellow-400" },
+    { icon: <SiTypescript />, class: "text-blue-500" },
+    { icon: <SiNodedotjs />, class: "text-green-500" },
+    { icon: <SiLaravel />, class: "text-red-500" },
+    { icon: <SiGin />, class: "text-blue-300" },
+    { icon: <SiNestjs />, class: "text-red-600" },
+    { icon: <SiHtml5 />, class: "text-orange-500" },
+    { icon: <SiCss3 />, class: "text-blue-400" },
+    { icon: <SiBootstrap />, class: "text-purple-500" },
+    { icon: <SiJquery />, class: "text-blue-400" },
+    { icon: <SiMysql />, class: "text-blue-600" },
+    { icon: <SiPostgresql />, class: "text-blue-400" },
+    { icon: <SiAwsamplify />, class: "text-orange-400" },
+    { icon: <SiDocker />, class: "text-blue-500" },
+    { icon: <SiGit />, class: "text-orange-600" },
+    { icon: <SiAwsamplify />, class: "text-green-500" },
+    { icon: <SiMqtt />, class: "text-purple-300" },
   ];
 
   return (
@@ -74,9 +80,9 @@ const Hero = () => {
               repeat: Infinity,
               repeatType: "reverse",
             }}
-            className={`absolute text-xl md:text-2xl ${tech.class} font-mono opacity-20 select-none`}
+            className={`absolute text-3xl md:text-4xl ${tech.class} font-mono opacity-20 select-none`}
           >
-            {tech.name}
+            {tech.icon}
           </motion.div>
         ))}
       </div>
