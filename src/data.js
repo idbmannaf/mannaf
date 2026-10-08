@@ -166,4 +166,17 @@ export const projects = [
             github: "#",
         },
     },
+    {
+        order: 15,
+        title: "Green CyberSec Ltd.",
+        description:
+            "Corporate website for Green CyberSec Ltd. — cybersecurity, cloud security, DevSecOps, audits, and digital forensics",
+        image:
+            "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
+        tech: ["PHP", "HTML", "CSS"],
+        links: {
+            live: "https://greencybersec.net/",
+            github: "#",
+        },
+    },
 ].sort((a, b) => a.order - b.order);
